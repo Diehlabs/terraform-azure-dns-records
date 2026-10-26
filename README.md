@@ -5,13 +5,16 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+| ---- | ------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 2.74.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
+| ---- | ------- |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 2.74.0 |
 
 ## Modules
 
@@ -20,7 +23,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [azurerm_dns_a_record.a](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_a_record) | resource |
 | [azurerm_dns_a_record.a_dns_zone_record](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_a_record) | resource |
 | [azurerm_dns_aaaa_record.aaaa](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_aaaa_record) | resource |
@@ -37,17 +40,17 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_dns_zone_name"></a> [dns\_zone\_name](#input\_dns\_zone\_name) | The zone name to create. I.e. dev for dev.verituityplatform.com | `string` | n/a | yes |
 | <a name="input_records"></a> [records](#input\_records) | Map of all DNS records to create for var.dns\_zone\_name | `any` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The resource group name to the DNS records. | `string` | `null` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | Standard tags to apply to resources | `map` | `{}` | no |
-| <a name="input_tags_extra"></a> [tags\_extra](#input\_tags\_extra) | Extra tags to apply to resources | `any` | `{}` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Standard tags to apply to resources | `map(string)` | `{}` | no |
+| <a name="input_tags_extra"></a> [tags\_extra](#input\_tags\_extra) | Extra tags to apply to resources | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_a"></a> [a](#output\_a) | n/a |
 | <a name="output_caa"></a> [caa](#output\_caa) | n/a |
 | <a name="output_cname"></a> [cname](#output\_cname) | n/a |

@@ -5,7 +5,7 @@ resource "azurerm_dns_srv_record" "srv" {
   zone_name           = var.dns_zone_name
   resource_group_name = data.azurerm_resource_group.dns.name
   ttl                 = try(each.value.ttl, 300)
-  tags                = var.tags
+  tags                = local.tags
 
   dynamic "record" {
     for_each = each.value.records

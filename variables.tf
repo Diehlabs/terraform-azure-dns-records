@@ -10,18 +10,13 @@ variable "dns_zone_name" {
 }
 
 variable "tags" {
-  default = {}
-  # type = object({
-  #   # location    = string,
-  #   environment = string,
-  #   git_repo    = string,
-
-  # })
+  type        = map(string)
   description = "Standard tags to apply to resources"
+  default     = {}
 }
 
 variable "tags_extra" {
-  type        = any
+  type        = map(string)
   description = "Extra tags to apply to resources"
   default     = {}
 }
