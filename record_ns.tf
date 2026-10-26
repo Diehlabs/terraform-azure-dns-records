@@ -6,5 +6,5 @@ resource "azurerm_dns_ns_record" "ns" {
   resource_group_name = data.azurerm_resource_group.dns.name
   ttl                 = try(each.value.ttl, 300)
   records             = each.value.records
-  tags                = var.tags
+  tags                = local.tags
 }
